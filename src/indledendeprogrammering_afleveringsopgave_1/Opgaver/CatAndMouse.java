@@ -52,7 +52,7 @@ public class CatAndMouse {
         return mouse;
     }    
     
-    public static boolean mouseInPosition(int Direction, Point mouse) //Can be combined with the calling function
+    public static boolean mouseInPosition(int Direction, Point mouse) 
     {
         boolean inPosition = false;        
         if (Direction == 0 && mouse.x + 1 < boardSize)
@@ -87,5 +87,6 @@ public class CatAndMouse {
         return Length;
     }
     
-        
+    //The cake is a lie
+    
 }
