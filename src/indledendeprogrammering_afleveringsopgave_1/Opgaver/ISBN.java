@@ -14,13 +14,10 @@ public class ISBN {
         //Check for other things
         int theGoldenNumber = 0;
         for (int i = 0; i < ISBN12.length(); i++) {
-            char c = ISBN12.charAt(i);
-            if (i%2 == 0)
-                theGoldenNumber += Character.getNumericValue(c) * 1;
-            else
-                theGoldenNumber += Character.getNumericValue(c) * 3;
+            int cNumeric = Character.getNumericValue(ISBN12.charAt(i));
+            theGoldenNumber += (i % 2 == 0) ? cNumeric * 1 : cNumeric * 3;
         }
-        theGoldenNumber = 10 - theGoldenNumber%10;        
+        theGoldenNumber = 10 - (theGoldenNumber % 10);        
         return theGoldenNumber;        
     }
 }
